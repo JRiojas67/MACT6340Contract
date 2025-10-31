@@ -1,0 +1,28 @@
+{
+  "name": "mact6340contract",
+  "version": "1.0.0",
+  "description": "This is the smart contract for my nft mint for MACT6340 course",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "deploy": "npx hardhat run scripts/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRiojas67/MACT6340Contract.git"
+  },
+  "keywords": [],
+  "author": "Javier Riojas",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JRiojas67/MACT6340Contract/issues"
+  },
+  "homepage": "https://github.com/JRiojas67/MACT6340Contract#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.3",
+    "hardhat": "^3.0.10"
+  }
+}
