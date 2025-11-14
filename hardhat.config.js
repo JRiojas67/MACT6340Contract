@@ -9,10 +9,10 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 
 // change these for different networks
-const ALCHEMY_URL = 'https://polygon-mumbai.g.alchemy.com/v2/' + ALCHEMY_API_KEY;
-// const ALCHEMY_URL = 'https://polygon-mainnet.g.alchemy.com/v2/' + ALCHEMY_API_KEY;
-// const ALCHEMY_URL = 'https://eth-sepolia.g.alchemy.com/v2/' + ALCHEMY_API_KEY;
-// const ALCHEMY_URL = 'https://eth-mainnet.alchemyapi.io/v2/' + ALCHEMY_API_KEY;
+const ALCHEMY_URL = 'https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_API_KEY}';
+// const ALCHEMY_URL = 'https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}';
+// const ALCHEMY_URL = 'https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}';
+// const ALCHEMY_URL = 'https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY}';
 
 
 const STUNT_WALLET_PRIVATE_KEY = process.env.STUNT_WALLET_PRIVATE_KEY;
@@ -23,8 +23,8 @@ module.exports = {
         apiKey: {
         mainnet: ETHERSCAN_API_KEY,
         sepolia: ETHERSCAN_API_KEY,
-        polygon: ETHERSCAN_API_KEY,
-        polygonMumbai: ETHERSCAN_API_KEY,
+        polygon: POLYGONSCAN_API_KEY,
+        polygonMumbai: POLYGONSCAN_API_KEY,
         }, 
     },
     gasReport: {
