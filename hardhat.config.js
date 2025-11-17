@@ -1,7 +1,3 @@
-const { path } = require("d3");
-const { ethers } = require("hardhat");
-const { version } = require("p5");
-
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
