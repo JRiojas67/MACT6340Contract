@@ -32,7 +32,7 @@ module.exports = {
         noColors: true,
     },
 
-    defaultNetwork: "hardhat", // hardhat for testing, change this for different networks
+    defaultNetwork: "polygonMumbai", // hardhat for testing, change this for different networks
     networks: {
         hardhat: {
             chainId: 31337,

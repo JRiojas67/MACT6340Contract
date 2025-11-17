@@ -9,7 +9,7 @@ describe("JRiojasIronMindCreationsNFTContract", async function () {
     max_tokens: 3,
     base_uri:
       "https://ipfs.io/ipfs/bafkreidr5a7hvyiilxfug2yqpbkdowcahpbsw4jszstz6iur5ae5dx7b54",
-    royaltyArtist: "0x94848CEe6eA7dBcc5322f0B13015A42ec63bC3BB",
+    royaltyArtist: "b374dd461e18764ab8fa7e41df8f60410d8dc4c44c4630d318d6cc626935d8d4",
     royaltyBasis: 500,
     gasLimit: 30000000, // use a gas limit within the block gas limit
   };

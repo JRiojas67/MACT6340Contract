@@ -13,14 +13,14 @@ async function main() {
     max_tokens: 3,
     base_uri:
       "https://ipfs.io/ipfs/QmTwiGMeNjhrECN5tHkSEN7jHDEQ3tvFzeCXF4f3EhZJzv",
-    royaltyArtist: process.env.STUNT_WALLET_ADDRESS,
+    royaltyArtist: process.env.b374dd461e18764ab8fa7e41df8f60410d8dc4c44c4630d318d6cc626935d8d4,
     royaltyBasis: 500,
   };
-  const DGSCreativeNFTContractFactory = await ethers.getContractFactory(
-    "DGSCreativeNFTContract"
+  const JRiojasIronMindCreationsNFTContractFactory = await ethers.getContractFactory(
+    "JRiojasIronMindCreationsNFTContract"
   );
   // deploy
-  const DGSCreativeNFTContract = await DGSCreativeNFTContractFactory.deploy(
+  const JRiojasIronMindCreationsNFTContract = await JRiojasIronMindCreationsNFTContractFactory.deploy(
     args.mint_price,
     args.max_tokens,
     args.base_uri,
@@ -28,7 +28,7 @@ async function main() {
     args.royaltyBasis
   );
   console.log("Deploying...");
-  await DGSCreativeNFTContract.waitForDeployment(
+  await JRiojasIronMindCreationsNFTContract.waitForDeployment(
     args.mint_price,
     args.max_tokens,
     args.base_uri,
@@ -36,8 +36,8 @@ async function main() {
     args.royaltyBasis
   );
   console.log("Waiting for block verifications...");
-  await DGSCreativeNFTContract.deploymentTransaction().wait(15);
-  let contractAddress = await DGSCreativeNFTContract.getAddress();
+  await JRiojasIronMindCreationsNFTContract.deploymentTransaction().wait(15);
+  let contractAddress = await JRiojasIronMindCreationsNFTContract.getAddress();
   console.log(`Contract deployed to ${contractAddress}`);
   // verify
   if (
@@ -66,7 +66,7 @@ async function main() {
   ];
   console.log("Minting 3 tokens...");
   for (let i = 0; i < 3; i++) {
-    const transactionResponse = await DGSCreativeNFTContract.mintTo(ipfs[i], {
+    const transactionResponse = await JRiojasIronMindCreationsNFTContract.mintTo(ipfs[i], {
       value: args.mint_price,
     });
     await transactionResponse.wait(3);
